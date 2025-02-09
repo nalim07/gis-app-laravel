@@ -24,8 +24,8 @@ Route::get('/', function () {
 Route::get('auth/login', Login::class)->name('Login');
 Route::get('auth/register', Register::class)->name('Register');
 
-// dashboard
-Route::get('dashboard', Dashboard::class)->name('dashboard');
+// home
+Route::get('/home', function () {
+    return view('home');
+});
 
-// admin
-Route::get('admin/dashboard', Dashboard::class)->name('admin.dashboard');

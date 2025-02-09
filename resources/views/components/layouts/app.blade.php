@@ -7,14 +7,18 @@
 
     <link rel="icon" href="{{ asset('images/logo.ico') }}">
 
-    <title>{{ $title ?? 'Page Title' }}</title>
+    <title>{{ $title ?? config('app.name') }}</title>
 
     @livewireStyles
-    @vite('resources/css/app.css')
-    @vite(['resources/css/custom.css'])
+    @vite('resources/css/app.css', 'resources/js/app.js')
+    @vite(['resources/css/custom.css', 'resources/js/swiper.js'])
+
 </head>
 
-<body>
+<body class="m-0 overflow-x-hidden">
+    <x-header></x-header>
+    <x-navbar></x-navbar>
+
     {{ $slot }}
 
     @livewireScripts

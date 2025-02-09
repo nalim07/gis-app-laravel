@@ -6,5 +6,177 @@ input::-webkit-inner-spin-button {
 }
 
 .bg-customBlue {
-    background: linear-gradient(180deg, #0097CE 0%, #0175B2 85%, #005995 100%);
+  background: linear-gradient(180deg, #0097ce 0%, #0175b2 85%, #005995 100%);
+}
+
+/* Hamburger */
+.hamburger-line {
+  width: 20px;
+  height: 2px;
+  display: block;
+  margin: 5px 5px;
+  background-color: white;
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select,
+select {
+  display: none;
+  /*hide original SELECT element:*/
+  appearance: none;
+  background-image: url("../../public/icons/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 1.5rem auto;
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Input File */
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  color: #0097ce;
+  background-color: transparent;
+  display: inline-block;
+  padding: 4px;
+  border: 2px solid #0097ce;
+  /* Menambahkan border */
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-family: var(--Family-Inter, Inter);
+  font-style: normal;
+  font-weight: var(--Weight-Semibold, 600);
+  font-size: var(--Size-sm, 14px);
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: #aadef1;
+  border: 2px solid #0077a8;
+}
+
+.inputfile:focus + label {
+  outline: -webkit-focus-ring-color auto 0;
+}
+
+.inputfile + label span {
+  pointer-events: none;
+}
+
+/* Navigation Link */
+.active {
+  color: white; /* Warna teks untuk tautan aktif */
+  font-weight: bold; /* Membuat teks lebih tebal */
+}
+
+.swiper-slide {
+  width: 100%; /* Card memenuhi lebar container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #cafcfb;
+}
+
+/* Gaya dasar untuk seacrh */
+#search-container {
+  display: flex;
+  align-items: center;
+  width: 40px; /* Lebar awal */
+  transition: width 0.3s ease-in-out; /* Animasi perubahan lebar */
+}
+
+#search-container.expanded {
+  width: 270px;
+}
+
+#search {
+  display: none; /* Input disembunyikan secara default */
+}
+
+#search-container.expanded #search {
+  display: block; /* Tampilkan input ketika diperluas */
+}
+
+/* responsive  design */
+@media (max-width: 425px) {
+  #search-container.expanded {
+    width: 150px;
   }
+}
+
+@media (max-width: 1024px) {
+  #search-container.expanded {
+    width: 230px;
+  }
+}
