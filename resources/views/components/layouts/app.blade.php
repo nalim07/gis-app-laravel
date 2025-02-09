@@ -9,9 +9,11 @@
 
     <title>{{ $title ?? config('app.name') }}</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     @livewireStyles
-    @vite('resources/css/app.css', 'resources/js/app.js')
-    @vite(['resources/css/custom.css', 'resources/js/swiper.js'])
+    @vite('resources/css/app.css')
+    @vite('resources/css/custom.css')
 
 </head>
 
@@ -22,6 +24,8 @@
     {{ $slot }}
 
     @livewireScripts
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ asset('js/swiper.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
 </body>
 

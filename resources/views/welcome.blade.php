@@ -37,22 +37,20 @@
             <div class="flex h-full w-full flex-col items-center justify-center gap-4">
                 <img class="w-4/5" src="{{ asset('images/student-studying.svg') }}" alt="Student Studying" />
 
-                
                 <a href="{{ route('Register') }}"
                     class="flex w-3/4 cursor-pointer items-center justify-center gap-2 rounded-lg bg-[#0097ce] px-4 py-[10px] hover:bg-[#0175B2]">
                     <div class="font-inter text-base font-semibold text-white">
                         Register
                     </div>
                 </a>
-    
-                
+
                 <a href="{{ route('Login') }}"
                     class="flex w-3/4 cursor-pointer items-center justify-center gap-2 rounded-lg border border-[#0097ce] px-4 py-[10px] hover:bg-gray-50">
                     <div class="font-inter text-base font-semibold text-[#0097ce]">
                         Login
                     </div>
                 </a>
-    
+
             </div>
         </div>
 

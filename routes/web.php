@@ -21,11 +21,14 @@ Route::get('/', function () {
 });
 
 // login & register
-Route::get('auth/login', Login::class)->name('Login');
-Route::get('auth/register', Register::class)->name('Register');
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('Login');
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('Register');
 
 // home
 Route::get('/home', function () {
     return view('home');
 });
-

@@ -1,8 +1,12 @@
 <x-layouts.app>
-    
+
+    <div class="relative">
+        <!-- Background di belakang navbar -->
+        <div class="absolute -top-20 left-0 h-[150px] w-full bg-[#19212E]"></div>
+    </div>
 
     <main class="relative z-10 md:p-8">
-        <section class="mx-auto max-w-full rounded-lg bg-white p-8 shadow-lg md:max-w-6xl 2xl:max-w-7xl">
+        <section class="mx-auto max-w-full rounded-lg bg-white p-8 shadow-lg z-50 md:max-w-6xl 2xl:max-w-7xl">
             <!-- Welcome -->
             <div class="mb-20 flex w-full flex-col lg:flex-row-reverse">
                 <!-- Image Section -->
@@ -13,7 +17,7 @@
                     </div>
 
                     <!-- Image -->
-                    <img src="/public/home/student_holding_books.png"
+                        <img src="{{ asset('images/home/student_holding_books.png') }}"
                         class="absolute inset-0 z-20 h-full translate-x-48 md:translate-x-96 md:translate-y-7 lg:h-[20rem] lg:w-full lg:translate-x-0"
                         alt="Student holding books" />
 
@@ -22,13 +26,13 @@
                         class="absolute left-4 w-fit translate-y-2/3 rounded-lg bg-white px-4 py-2 shadow-lg md:translate-y-24 lg:bottom-0 lg:left-auto lg:z-50 lg:translate-x-12 lg:translate-y-2/3">
                         <div class="mb-1 flex items-center justify-between">
                             <div class="flex -space-x-3">
-                                <img src="/public/home/avatar3.png" class="h-6 w-6 rounded-full border"
+                                <img src="{{ asset('images/home/avatar3.png') }}" class="h-6 w-6 rounded-full border"
                                     alt="Avatar 1" />
-                                <img src="/public/home/avatar2.png" class="z-30 h-6 w-6 rounded-full border"
+                                <img src="{{ asset('images/home/avatar2.png') }}" class="z-30 h-6 w-6 rounded-full border"
                                     alt="Avatar 2" />
-                                <img src="/public/home/avatar3.png" class="z-40 h-6 w-6 rounded-full border"
+                                <img src="{{ asset('images/home/avatar3.png') }}" class="z-40 h-6 w-6 rounded-full border"
                                     alt="Avatar 3" />
-                                <img src="/public/home/avatar1.png" class="z-50 h-6 w-6 rounded-full border"
+                                <img src="{{ asset('images/home/avatar1.png') }}" class="z-50 h-6 w-6 rounded-full border"
                                     alt="Avatar 4" />
                             </div>
                             <span class="ml-2 font-worksans text-lg font-medium text-[#19212E] md:text-xl">240+</span>
@@ -91,7 +95,7 @@
 
             <!-- Fitur Unggulan -->
             <div class="relative mb-12 h-fit w-full bg-cover bg-center"
-                style="background-image: url(&quot;/public/content-bg.webp&quot;)">
+                style="background-image: url('{{ asset('images/home/content-bg.webp') }}')">
                 <!-- Overlay -->
                 <div class="absolute inset-0 bg-black bg-opacity-30"></div>
 
@@ -112,7 +116,7 @@
                                 <div
                                     class="swiper-slide flex h-full items-center justify-center rounded-xl bg-[#3A475F]/95 p-6 text-center text-white shadow-lg">
                                     <div class="flex h-full flex-col items-center justify-center">
-                                        <img src="/public/icons/lightbulb.svg" alt="" class="mb-4 h-12 w-12" />
+                                        <img src="{{ asset('images/home/lightbulb.svg') }}" alt="" class="mb-4 h-12 w-12" />
                                         <h2 class="font-Poppins text-lg font-medium leading-6">
                                             Inovasi Pembelajaran yang Membantu Siswa Mencapai
                                             Potensi Terbaiknya
@@ -138,7 +142,7 @@
                                 <div
                                     class="swiper-slide flex h-full items-center justify-center rounded-xl bg-[#3A475F]/95 p-6 text-center text-white shadow-lg">
                                     <div class="flex h-full flex-col items-center justify-center">
-                                        <img src="/public/icons/lightbulb.svg" alt="" class="mb-4 h-12 w-12" />
+                                        <img src="{{ asset('images/home/lightbulb.svg') }}" alt="" class="mb-4 h-12 w-12" />
                                         <h2 class="font-Poppins text-lg font-medium leading-6">
                                             Program Ekstrakurikuler yang Mendorong Kreativitas dan
                                             Kemandirian Siswa
@@ -164,7 +168,7 @@
                                 <div
                                     class="swiper-slide flex h-full items-center justify-center rounded-xl bg-[#3A475F]/95 p-6 text-center text-white shadow-lg">
                                     <div class="flex h-full flex-col items-center justify-center">
-                                        <img src="/public/icons/lightbulb.svg" alt="" class="mb-4 h-12 w-12" />
+                                        <img src="{{ asset('images/home/lightbulb.svg') }}" alt="" class="mb-4 h-12 w-12" />
                                         <h2 class="font-Poppins text-lg font-medium leading-6">
                                             Lingkungan Belajar yang Aman dan Nyaman untuk Semua
                                             Siswa
@@ -303,7 +307,7 @@
 
                             <!-- User Information -->
                             <div class="flex items-center justify-start gap-2">
-                                <img class="h-7 w-7 rounded-full" src="/public/home/avatar1.png" alt="User Avatar" />
+                                <img class="h-7 w-7 rounded-full" src="{{ asset('images/home/avatar1.png') }}" alt="User Avatar" />
                                 <div class="flex flex-col items-start justify-start gap-1">
                                     <div class="font-worksans text-xs font-semibold leading-none text-neutral-800">
                                         Ayu Pratiwi
@@ -349,7 +353,7 @@
 
                             <!-- User Information -->
                             <div class="flex items-center justify-start gap-2">
-                                <img class="h-7 w-7 rounded-full" src="/public/home/avatar1.png" alt="User Avatar" />
+                                <img class="h-7 w-7 rounded-full" src="{{ asset('images/home/avatar1.png') }}" alt="User Avatar" />
                                 <div class="flex flex-col items-start justify-start gap-1">
                                     <div class="font-worksans text-xs font-semibold leading-none text-neutral-800">
                                         Ayu Pratiwi
@@ -395,7 +399,7 @@
 
                             <!-- User Information -->
                             <div class="flex items-center justify-start gap-2">
-                                <img class="h-7 w-7 rounded-full" src="/public/home/avatar1.png" alt="User Avatar" />
+                                <img class="h-7 w-7 rounded-full" src="{{ asset('images/home/avatar1.png') }}" alt="User Avatar" />
                                 <div class="flex flex-col items-start justify-start gap-1">
                                     <div class="font-worksans text-xs font-semibold leading-none text-neutral-800">
                                         Ayu Pratiwi
@@ -502,4 +506,4 @@
         </section>
     </main>
 
-</x-layouts>
+    </x-layouts>
